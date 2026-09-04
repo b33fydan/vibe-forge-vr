@@ -1,0 +1,8 @@
+{
+    "name": "VibeForge.Terminal",
+    "references": [
+        "Oculus.Interaction",
+        "Oculus.VR",
+        "Unity.TextMeshPro"
+    ]
+}

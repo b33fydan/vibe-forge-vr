@@ -1,0 +1,12 @@
+{
+    "name": "VibeForge.Terminal.Tests",
+    "references": [
+        "VibeForge.Terminal",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
