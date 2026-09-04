@@ -47,3 +47,9 @@ ExportedObj/
 # Crash reports
 crashlytics-build.properties
 /[Cc]rashes/
+
+# Local Meta dev-machine state (auto-generated tokens, ports, app IDs)
+Assets/Resources/DevAgentSettings.asset
+Assets/Resources/DevAgentSettings.asset.meta
+Assets/Resources/OVRPlatformToolSettings.asset
+Assets/Resources/OVRPlatformToolSettings.asset.meta
