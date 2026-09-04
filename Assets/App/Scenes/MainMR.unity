@@ -785,6 +785,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1397600019941919615, guid: 982ea7c9970bf124bb5535f9df2f9531, type: 3}
   m_PrefabInstance: {fileID: 1267505677}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &1484993680 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20000010189485334, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+  m_PrefabInstance: {fileID: 696434025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1484993681 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20000012175207052, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+  m_PrefabInstance: {fileID: 696434025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1577699828
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +915,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae60cfa43388e449a7518f36418f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1931652199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1931652201}
+  - component: {fileID: 1931652200}
+  m_Layer: 0
+  m_Name: PassthroughCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1931652200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931652199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb3447301d92e43ff8000777dfbc6a51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VibeForge.Runtime::VibeForge.Runtime.VFPassthroughCamera
+  _eyeCameras:
+  - {fileID: 696434029}
+  - {fileID: 1484993681}
+  - {fileID: 1484993680}
+--- !u!4 &1931652201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931652199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1998293932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -991,3 +1049,4 @@ SceneRoots:
   - {fileID: 116459176}
   - {fileID: 34133152}
   - {fileID: 714134483}
+  - {fileID: 1931652201}

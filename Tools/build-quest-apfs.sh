@@ -26,6 +26,7 @@ cd "$REPO_ROOT"
 tar -cf - \
   --exclude=.git --exclude=Library --exclude=Builds --exclude=Artifacts \
   --exclude=Temp --exclude=Logs --exclude=UserSettings \
+  --exclude='My project' --exclude='VR Terminal' \
   --exclude='*.csproj' --exclude='*.sln' . \
   | (cd "$WORK" && tar -xf -)
 find "$WORK" -name "._*" -delete

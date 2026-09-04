@@ -6,6 +6,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VibeForge.Runtime;
 
 // Idempotent scene setup: builds Assets/App/Scenes/MainMR.unity with exactly
 // one OVRCameraRig, passthrough underlay, OVR controller tracking plus an
@@ -100,6 +101,7 @@ public static class VFSceneSetup
 
         EnsureRightRay(rightController, hmd);
         EnsurePassthrough();
+        EnsurePassthroughCamera(rig);
         EnsureBuildScene();
 
         EditorSceneManager.MarkSceneDirty(scene);
@@ -281,6 +283,38 @@ public static class VFSceneSetup
         OVRPassthroughLayer layer = go.AddComponent<OVRPassthroughLayer>();
         layer.overlayType = OVROverlay.OverlayType.Underlay;
         Debug.Log("VF_SCENE_ADD Passthrough underlay");
+    }
+
+    static void EnsurePassthroughCamera(OVRCameraRig rig)
+    {
+        Camera[] eyes =
+        {
+            rig.centerEyeAnchor != null ? rig.centerEyeAnchor.GetComponent<Camera>() : null,
+            rig.leftEyeAnchor != null ? rig.leftEyeAnchor.GetComponent<Camera>() : null,
+            rig.rightEyeAnchor != null ? rig.rightEyeAnchor.GetComponent<Camera>() : null,
+        };
+        if (eyes[0] == null || eyes[1] == null || eyes[2] == null)
+        {
+            Debug.LogError("VF_SCENE_FAIL rig eye anchors missing cameras");
+            EditorApplication.Exit(1);
+            return;
+        }
+
+        var camera = Object.FindFirstObjectByType<VFPassthroughCamera>();
+        GameObject go;
+        if (camera == null)
+        {
+            go = new GameObject("PassthroughCamera");
+            camera = go.AddComponent<VFPassthroughCamera>();
+            Debug.Log("VF_SCENE_ADD PassthroughCamera");
+        }
+        else
+        {
+            go = camera.gameObject;
+        }
+
+        camera.Inject(eyes);
+        EditorUtility.SetDirty(go);
     }
 
     static void EnsureBuildScene()
