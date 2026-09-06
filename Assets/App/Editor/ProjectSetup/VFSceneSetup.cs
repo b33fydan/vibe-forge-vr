@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Oculus.Interaction;
 using Oculus.Interaction.Input;
+using Oculus.Interaction.UnityXR;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -99,6 +100,7 @@ public static class VFSceneSetup
             Debug.Log("VF_SCENE_ADD Hmd");
         }
 
+        EnsureControllerDataSources(rig);
         EnsureRightRay(rightController, hmd);
         EnsurePassthrough();
         EnsurePassthroughCamera(rig);
@@ -283,6 +285,61 @@ public static class VFSceneSetup
         OVRPassthroughLayer layer = go.AddComponent<OVRPassthroughLayer>();
         layer.overlayType = OVROverlay.OverlayType.Underlay;
         Debug.Log("VF_SCENE_ADD Passthrough underlay");
+    }
+
+    // The raw Controllers prefab ships Controller components with no data
+    // source, so every IsConnected read throws. Mirror Meta's comprehensive
+    // rig: feed each Controller from a handed UnityXR (OpenXR) source.
+    // Pass-through (apply=false) hands the live event-fed asset straight
+    // through, so no update-mode choreography is needed.
+    static void EnsureControllerDataSources(OVRCameraRig rig)
+    {
+        Transform trackingSpace = rig.trackingSpace;
+        var transformer =
+            Object.FindFirstObjectByType<TransformTrackingToWorldTransformer>();
+        if (transformer == null)
+        {
+            var txGo = new GameObject("TrackingToWorld");
+            txGo.transform.SetParent(trackingSpace, false);
+            transformer = txGo.AddComponent<TransformTrackingToWorldTransformer>();
+            Debug.Log("VF_SCENE_ADD TrackingToWorld");
+        }
+
+        var serialized = new SerializedObject(transformer);
+        serialized.FindProperty("TrackingSpace").objectReferenceValue = trackingSpace;
+        serialized.ApplyModifiedPropertiesWithoutUndo();
+        EditorUtility.SetDirty(transformer);
+
+        EnsureControllerSource(Handedness.Left, transformer);
+        EnsureControllerSource(Handedness.Right, transformer);
+    }
+
+    static void EnsureControllerSource(
+        Handedness handedness, TransformTrackingToWorldTransformer transformer)
+    {
+        Controller controller = FindController(handedness);
+        if (controller == null)
+        {
+            Debug.LogError("VF_SCENE_FAIL no " + handedness + " Controller for data source");
+            EditorApplication.Exit(1);
+            return;
+        }
+
+        var source = controller.GetComponent<FromUnityXRControllerDataSource>();
+        if (source == null)
+        {
+            source = controller.gameObject.AddComponent<FromUnityXRControllerDataSource>();
+            Debug.Log("VF_SCENE_ADD UnityXR source " + handedness);
+        }
+
+        source.InjectHandedness(handedness);
+        source.InjectTrackingToWorldTransformer(transformer);
+        if (controller.ModifyDataFromSource == null)
+        {
+            controller.InjectModifyDataFromSource(source);
+        }
+
+        EditorUtility.SetDirty(controller.gameObject);
     }
 
     static void EnsurePassthroughCamera(OVRCameraRig rig)

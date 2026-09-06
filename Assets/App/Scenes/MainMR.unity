@@ -473,6 +473,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1267505678}
+    - targetCorrespondingSourceObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2061210532}
     - targetCorrespondingSourceObject: {fileID: 482130, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 600419120}
@@ -892,7 +895,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 554886320621658114, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998293933}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8561447745529782927, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1747727437}
+    - targetCorrespondingSourceObject: {fileID: 1587756808485896233, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1747727436}
   m_SourcePrefab: {fileID: 100100000, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
 --- !u!4 &1747727431 stripped
 Transform:
@@ -909,12 +918,1234 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7072864542998684210, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
   m_PrefabInstance: {fileID: 1747727430}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1747727434}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ae60cfa43388e449a7518f36418f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1747727434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1587756808485896233, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+  m_PrefabInstance: {fileID: 1747727430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1747727435 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8561447745529782927, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+  m_PrefabInstance: {fileID: 1747727430}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1747727436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747727434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66491dedaea34435b6579dca4ce0e649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction.UnityXR::Oculus.Interaction.UnityXR.FromUnityXRControllerDataSource
+  _updateMode: 0
+  _updateAfter: {fileID: 0}
+  _handedness: 1
+  _trackingToWorldTransformer: {fileID: 2061210533}
+  _leftHandControllerBindings:
+    m_Name: XRController
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: PrimaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PrimaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: GripButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: MenuButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisClick
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Thumbrest
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Secondary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: RootPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PointerPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/primaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/secondaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/gripPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: GripButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/triggerPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/triggerTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/menu
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MenuButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstickClicked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisClick
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstickTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbrestTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thumbrest
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Trigger
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/grip
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/devicePose
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: RootPose
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/pointer
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PointerPose
+      m_Flags: 0
+  _rightHandControllerBindings:
+    m_Name: XRController
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: PrimaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PrimaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: GripButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: MenuButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisClick
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Thumbrest
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Secondary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: RootPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PointerPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/primaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/secondaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/gripPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: GripButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/triggerPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/triggerTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/menu
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MenuButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstickClicked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisClick
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstickTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbrestTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thumbrest
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Trigger
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/grip
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/devicePose
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: RootPose
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/pointer
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PointerPose
+      m_Flags: 0
+--- !u!114 &1747727437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747727435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66491dedaea34435b6579dca4ce0e649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction.UnityXR::Oculus.Interaction.UnityXR.FromUnityXRControllerDataSource
+  _updateMode: 0
+  _updateAfter: {fileID: 0}
+  _handedness: 0
+  _trackingToWorldTransformer: {fileID: 2061210533}
+  _leftHandControllerBindings:
+    m_Name: XRController
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: PrimaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PrimaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: GripButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: MenuButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisClick
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Thumbrest
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Secondary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: RootPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PointerPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/primaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/secondaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/gripPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: GripButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/triggerPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/triggerTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/menu
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MenuButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstickClicked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisClick
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstickTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbrestTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thumbrest
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Trigger
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/grip
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/thumbstick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/devicePose
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: RootPose
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{LeftHand}/pointer
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PointerPose
+      m_Flags: 0
+  _rightHandControllerBindings:
+    m_Name: XRController
+    m_Id: 
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: PrimaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PrimaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: SecondaryTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: GripButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: TriggerTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: MenuButton
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisClick
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxisTouch
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Thumbrest
+      m_Type: 0
+      m_ExpectedControlType: Integer
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Grip
+      m_Type: 0
+      m_ExpectedControlType: Axis1D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Primary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: Secondary2DAxis
+      m_Type: 0
+      m_ExpectedControlType: Axis2D
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: RootPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    - m_Name: PointerPose
+      m_Type: 0
+      m_ExpectedControlType: Pose
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+      m_Priority: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/primaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/primaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PrimaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/secondaryTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: SecondaryTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/gripPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: GripButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/triggerPressed
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/triggerTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: TriggerTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/menu
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: MenuButton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstickClicked
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisClick
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstickTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxisTouch
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbrestTouched
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Thumbrest
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Trigger
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/grip
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/thumbstick
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Primary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Secondary2DAxis
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/devicePose
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: RootPose
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 
+      m_Path: <XRController>{RightHand}/pointer
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: PointerPose
+      m_Flags: 0
 --- !u!1 &1931652199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,6 +2271,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4733c5f009d26ad49b3685117b8d3eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2061210531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2061210532}
+  - component: {fileID: 2061210533}
+  m_Layer: 0
+  m_Name: TrackingToWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2061210532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061210531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 696434026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061210533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061210531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa452ecf396598645be0cd4a16ac533f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.TransformTrackingToWorldTransformer
+  TrackingSpace: {fileID: 696434026}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

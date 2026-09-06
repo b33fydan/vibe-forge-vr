@@ -27,6 +27,20 @@ namespace VibeForge.Terminal
 
         Coroutine _reveal;
 
+        void Start()
+        {
+            // Editor-time placement is meaningless: Guardian recenters the
+            // rig at runtime. Pose once tracking has settled (heuristic
+            // delay; Recenter stays the deterministic fallback).
+            if (_panelRoot == null || _headAnchor == null)
+            {
+                Debug.LogError("VF_SUMMON_FAIL missing panel root or head anchor on " + name);
+                return;
+            }
+
+            StartCoroutine(PlaceAfterSettle());
+        }
+
         void Update()
         {
             if (OVRInput.GetDown(OVRInput.Button.Start))
@@ -85,6 +99,12 @@ namespace VibeForge.Terminal
                 // Canvas front (+Z) must look at the operator.
                 _panelRoot.transform.rotation = Quaternion.LookRotation(face.normalized, Vector3.up);
             }
+        }
+
+        IEnumerator PlaceAfterSettle()
+        {
+            yield return new WaitForSecondsRealtime(0.5f);
+            PlaceInFrontOfHead();
         }
 
         IEnumerator Reveal()
