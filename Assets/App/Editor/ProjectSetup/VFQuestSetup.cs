@@ -86,8 +86,37 @@ public static class VFQuestSetup
         Debug.Log("VF_QUEST_OK target=Android loader=OpenXR initOnStart=true");
 
         ApplyRequiredFixes();
+        EnsureInsightPassthrough();
 
         VerifyMetaFeatureSet();
+    }
+
+    // Insight passthrough stays dark without this: the flag declares the
+    // com.oculus.feature.PASSTHROUGH feature and lets the runtime start
+    // the passthrough service the underlay layer composites.
+    static void EnsureInsightPassthrough()
+    {
+        OVRProjectConfig config = OVRProjectConfig.CachedProjectConfig;
+        if (config == null)
+        {
+            Debug.LogError("VF_PASSTHROUGH_FAIL no OVRProjectConfig");
+            EditorApplication.Exit(1);
+            return;
+        }
+
+        if (config.insightPassthroughSupport ==
+            OVRProjectConfig.FeatureSupport.None)
+        {
+            config.insightPassthroughSupport =
+                OVRProjectConfig.FeatureSupport.Supported;
+            EditorUtility.SetDirty(config);
+            AssetDatabase.SaveAssets();
+            Debug.Log("VF_PASSTHROUGH_OK insightPassthroughSupport=Supported");
+        }
+        else
+        {
+            Debug.Log("VF_PASSTHROUGH known=" + config.insightPassthroughSupport);
+        }
     }
 
     // Ensures Meta's OpenXR feature set is enabled for Android, mirroring
