@@ -849,6 +849,14 @@ PrefabInstance:
       propertyPath: '_interactors.Array.data[0]'
       value: 
       objectReference: {fileID: 1998293934}
+    - target: {fileID: 4203252876487560164, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+      propertyPath: _iModifyDataFromSourceMono
+      value: 
+      objectReference: {fileID: 1747727437}
+    - target: {fileID: 7072864542998684210, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
+      propertyPath: _iModifyDataFromSourceMono
+      value: 
+      objectReference: {fileID: 1747727436}
     - target: {fileID: 8133308069293065735, guid: ad9b966cab9674348856e3325c3cb4ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

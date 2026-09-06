@@ -339,7 +339,19 @@ public static class VFSceneSetup
             controller.InjectModifyDataFromSource(source);
         }
 
+        // Plain field assignment does not flag prefab-instance overrides;
+        // without this the injection is silently dropped on save.
+        RecordPrefabModifications(source);
+        RecordPrefabModifications(controller);
         EditorUtility.SetDirty(controller.gameObject);
+    }
+
+    static void RecordPrefabModifications(Object component)
+    {
+        if (PrefabUtility.IsPartOfPrefabInstance(component))
+        {
+            PrefabUtility.RecordPrefabInstancePropertyModifications(component);
+        }
     }
 
     static void EnsurePassthroughCamera(OVRCameraRig rig)
